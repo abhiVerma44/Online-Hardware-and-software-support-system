@@ -10,7 +10,7 @@ public interface Employee_dao {
    public String RegisterAsEmployee(Employee emp);
 	
 	
-	public String LiginAsEmployee(String email, String password);
+	public String LoginAsEmployee(String email, String password);
 
 	
 	public String raiseProblem(Problem p1);

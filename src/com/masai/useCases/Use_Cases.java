@@ -123,8 +123,8 @@ public class Use_Cases {
 						int complainid = scanner.nextInt();
 						
 						HOD_dao h1 = new HOD_daoImpl();
-						h1.AssignProblemToEngineer(complainid, engineerId);
-						
+						String res=h1.AssignProblemToEngineer(complainid, engineerId);
+						System.out.println(res);
 						break;
 					}
 					default:
@@ -264,8 +264,7 @@ public class Use_Cases {
 				else {
 				  switch (key) {
 				    case 11:{
-				    	System.out.print("Enter your EmployeeID : ");
-						int EmployeeID = scanner.nextInt();
+				    	
 						
 						System.out.print("Enter your Name : ");
 						String Name = scanner.nextLine();
@@ -277,8 +276,9 @@ public class Use_Cases {
 						String password = scanner.nextLine();
 						
 						Employee_dao emp = new Employee_daoImpl();
-						Employee emp1 =new Employee(EmployeeID,Name,emailID,password);
-						emp.RegisterAsEmployee(emp1);
+						Employee emp1 =new Employee(Name,emailID,password);
+						String res=emp.RegisterAsEmployee(emp1);
+						System.out.println(res);
 				    	break;
 				    }
 					case 12: {
@@ -290,7 +290,9 @@ public class Use_Cases {
 						String password = scanner.nextLine();
 						
 						Employee_dao emp = new Employee_daoImpl();
-						emp.LiginAsEmployee(Email, password);
+						String res=emp.LoginAsEmployee(Email, password);
+						System.out.println(res);
+
 				    	break;
 						
 					}
@@ -311,8 +313,8 @@ public class Use_Cases {
 						
 						Employee_dao emp = new Employee_daoImpl();
 						Problem pa=new Problem(problemName,category,Status,EmployeeID);
-						emp.raiseProblem(pa);
-						
+						String res=emp.raiseProblem(pa);
+						System.out.println(res);
 						break;
 						
 						
@@ -326,8 +328,8 @@ public class Use_Cases {
 						int ComplainId = scanner.nextInt();
 
 						Employee_dao emp = new Employee_daoImpl();
-						emp.checkStatus(ComplainId,EmployeeID);
-						
+						String res=emp.checkStatus(ComplainId,EmployeeID);
+						System.out.println(res);
 						break;
 						
 					}
@@ -353,7 +355,8 @@ public class Use_Cases {
 						String newPassword = scanner.nextLine();
 						
 						Employee_dao emp = new Employee_daoImpl();
-						emp.changePassword(email,oldPasssword,newPassword);
+						String res=emp.changePassword(email,oldPasssword,newPassword);
+						System.out.println(res);
 					    break;
 					}
 					default:

@@ -28,7 +28,7 @@ public class HOD_daoImpl implements HOD_dao{
 			
 			if(rs.next()) {
 				message = "Wecome "+ rs.getString("HOD_name");
-				System.out.println(message);
+				//System.out.println(message);
 			}else {
 				System.out.println(message);
 				
@@ -63,7 +63,7 @@ public class HOD_daoImpl implements HOD_dao{
 				
 				if(x>0) {
 					message = eng.getEngineer_name()+ " succesfully register inside the engineers database";
-					System.out.println(message);
+					//System.out.println(message);
 				}else {
 					System.out.println(message);
 				}
@@ -126,7 +126,7 @@ public class HOD_daoImpl implements HOD_dao{
 			int x = pt.executeUpdate();
 			if(x>0) {
 				string = eId + " Is delete from the engineers database.....";
-				System.out.println(string);
+				//System.out.println(string);
 			}else {
 				System.out.println(string);
 			}
@@ -169,7 +169,7 @@ public class HOD_daoImpl implements HOD_dao{
 			}
 			if(!rSet.next())
 			{
-				System.out.println("Probme database is empty...");
+				System.out.println("Problem database is empty...");
 			}
 			
 			
@@ -189,13 +189,13 @@ public class HOD_daoImpl implements HOD_dao{
 			
 			try (Connection conn = DBUtil.provideconnection()){
 				
-				PreparedStatement pt = conn.prepareStatement("update Problem set Engineer_Id = ? where complain_Id = ?");
+				PreparedStatement pt = conn.prepareStatement("update Problem set Problem_engineerId = ? where complain_Id = ?");
 				pt.setString(1, EngineerID);
 				pt.setInt(2, complainId);
 				int x = pt.executeUpdate();
 				if(x>0) {
 					meString = EngineerID+" assigned to "+ complainId +" problem";
-					System.out.println(meString);
+					//System.out.println(meString);
 				}else {
 					System.out.println(meString);
 				}

@@ -27,10 +27,10 @@ public class Employee_daoImpl implements Employee_dao{
 			int x = pt.executeUpdate();
 			if(x>0) {
 				message = "Employee succesfuly register....";
-				System.out.println(message);
+				//System.out.println(message);
 			}else {
 				message = "You have enter somethink wrong details";
-				System.out.println(message);
+				//System.out.println(message);
 			}
 			
 			
@@ -45,7 +45,7 @@ public class Employee_daoImpl implements Employee_dao{
 	}
 
 	@Override
-	public String LiginAsEmployee(String email, String password) {
+	public String LoginAsEmployee(String email, String password) {
 		String message = "";
 		
         try( Connection conn = DBUtil.provideconnection()) {
@@ -57,10 +57,10 @@ public class Employee_daoImpl implements Employee_dao{
 			ResultSet rSet = pt.executeQuery();
 			if(rSet.next()) {
 				message = "Welcome"+rSet.getString("name");
-				System.out.println(message);
+				//System.out.println(message);
 			}else {
 				message = "Employee deosn't exits with "+email;
-				System.out.println(message);
+				//System.out.println(message);
 			}
 			
 			
@@ -89,10 +89,10 @@ public class Employee_daoImpl implements Employee_dao{
 			int x = pr.executeUpdate();
 			if(x>0) {
 				prblmString = "Register successfull...";
-				System.out.println(prblmString);
+				//System.out.println(prblmString);
 			}else {
 				prblmString = "you have entered somethink wrong credential";
-				System.out.println(prblmString);
+				//System.out.println(prblmString);
 			}
 			
 			
@@ -121,12 +121,12 @@ public class Employee_daoImpl implements Employee_dao{
 				if(x.next()) {
 					
 					message = "your problem Assigned to "+x.getString("Problem_engineerId");
-					System.out.println(message);
+					//System.out.println(message);
 					
 				}else {
 				
 					message = "you didn't raise any problems....";
-					System.out.println(message);
+					//System.out.println(message);
 					
 				}
 				
@@ -194,10 +194,10 @@ public class Employee_daoImpl implements Employee_dao{
 			int x = pt.executeUpdate();
 			if(x>0) {
 				messaString = "Successfully Password changed";
-				System.out.println(messaString);
+				//System.out.println(messaString);
 			}else {
 				messaString = "You have entered somethink wrong details";
-				System.out.println(messaString);
+				//System.out.println(messaString);
 			}
 			
 			
