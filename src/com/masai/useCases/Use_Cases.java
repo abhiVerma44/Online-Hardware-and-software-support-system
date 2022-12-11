@@ -54,7 +54,7 @@ public class Use_Cases {
 				int key = scanner.nextInt();
 				scanner.nextLine();
 				if(key==0) {
-					System.out.println("Logout siccesfull...");
+					System.out.println("Logout succesfull...");
 					break;
 				}
 				
